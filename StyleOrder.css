@@ -1,0 +1,316 @@
+
+/* Removes default browser spacing and makes layout predictable */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edf2e6;
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #4a295f;
+  padding-top: 50px; /* prevents content from going under fixed navbar */
+}
+
+/* Top banner with main title and short description */
+
+.order-header {
+  background-color: #4a295f;
+  color: white;
+  text-align: center;
+  padding: 36px 20px 46px;
+}
+
+/* Main title style */
+.order-header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 58px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+/* Subtitle text */
+.order-header p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* Controls overall page width and spacing */
+
+.order-page {
+  max-width: 1180px;
+  margin: 0 auto; /* centers content */
+  padding: 45px 70px 80px;
+}
+
+/* ===== Order summary card ===== */
+/* Displays product info and price */
+
+.order-summary {
+  width: 460px;
+  background-color: #f7f7f7;
+  border: 2px solid #5a346f;
+  border-radius: 24px;
+  padding: 22px 24px 20px;
+  margin-bottom: 42px;
+}
+
+.order-summary h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.order-summary h3 {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+/* Product list */
+.order-summary ul {
+  list-style: none;
+  margin-bottom: 18px;
+}
+
+/* List items */
+.order-summary li {
+  font-size: 18px;
+  color: #7e7e7e;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Price row layout */
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Current price */
+.new-price {
+  font-size: 38px;
+  font-weight: 800;
+  color: #4a295f;
+}
+
+/* Old price with line-through (discount effect) */
+.old-price {
+  font-size: 28px;
+  color: #5f4b6e;
+  text-decoration: line-through;
+}
+
+/* ===== Form styles ===== */
+
+.order-form {
+  width: 100%;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.section-title h2 {
+  font-size: 34px;
+  color: #4a295f;
+  white-space: nowrap;
+}
+
+/* Decorative line next to titles */
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #6a4a7f;
+}
+
+/* Grid spacing */
+.form-grid {
+  margin-bottom: 38px;
+}
+
+/* Two-column layout for inputs */
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px 34px;
+}
+
+/* Extra spacing between grouped rows */
+.row {
+  margin-bottom: 22px;
+}
+
+input,
+textarea {
+  width: 100%;
+  background-color: #f7f7f7;
+  border: 2px solid #5a346f;
+  border-radius: 18px;
+  padding: 18px 22px;
+  font-size: 18px;
+  color: #4a295f;
+  outline: none;
+}
+
+/* Placeholder text style */
+input::placeholder,
+textarea::placeholder {
+  color: #959595;
+}
+
+/* Changes border color when user clicks input */
+input:focus,
+textarea:focus {
+  border-color: #3f8fe8;
+}
+
+/* Full width inputs */
+.full-width {
+  display: block;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+/* ===== Delivery options ===== */
+/* Radio buttons for delivery selection */
+
+.delivery-options {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 34px;
+  padding-left: 20px;
+}
+
+/* Label styling */
+.delivery-options label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  color: #8a8a8a;
+}
+
+/* Custom radio button color */
+.delivery-options input {
+  width: 16px;
+  height: 16px;
+  accent-color: #7d5bb2;
+}
+
+/* Green text for price highlights */
+.green-text {
+  color: #3ac85c;
+}
+
+/* Optional text style */
+.optional {
+  font-size: 20px;
+  font-weight: 400;
+  color: #888;
+}
+
+/* Textarea settings */
+textarea {
+  min-height: 72px;
+  resize: vertical;
+  margin-bottom: 36px;
+}
+
+/* ===== Button section ===== */
+/* Centers the submit button */
+
+.button-wrap {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Submit button style */
+.submit-button {
+  background-color: #4a295f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 34px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect for button */
+.submit-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(74, 41, 95, 0.25);
+}
+
+/* ===== Order confirmation message ===== */
+/* Hidden by default, shown after form submission with JS */
+
+.order-message {
+  display: none;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* When JS adds "show" class, message becomes visible */
+.order-message.show {
+  display: block;
+}
+
+/* Message title */
+.order-message h2 {
+  font-size: 34px;
+  color: #4a295f;
+  margin-bottom: 26px;
+}
+
+/* Message text */
+.order-message p {
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #4a295f;
+}
+
+/* ===== Navbar ===== */
+/* Fixed top navigation */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 20px 60px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+
+  z-index: 1000;
+}
+
+/* Navigation links layout */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+/* Link style */
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4b1f7a;
+  transition: 0.2s ease;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+  opacity: 0.6;
+}

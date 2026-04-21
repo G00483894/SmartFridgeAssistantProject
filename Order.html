@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fridge</title>
+    <link rel="stylesheet" href="StyleOrder.css">
+</head>
+<body>
+ <!--Navigation bar-->
+   <header class="navbar">
+  <div class="nav-links">
+    <a href="Index.html">Home</a>
+    <a href="Features.html">How it works</a>
+    <a href="Order.html">Order</a>
+  </div>
+</header>
+
+    <header class="order-header">
+    <h1>Order your smart fridge assistant</h1>
+    <p>Order Your Smart Fridge Assistant</p>
+    <p>Fast delivery. Easy setup. Start saving from day one.</p>
+  </header>
+
+  <main class="order-page">
+<!-- Main container for order content -->
+    <section class="order-summary">
+      <h2>Your Order</h2>
+      <h3>What’s in the box:</h3>
+
+      <ul>
+        <li>Smart Fridge Assistant device</li>
+        <li>Mobile app (iOS & Android) — free</li>
+        <li>Installation guide</li>
+        <li>2-year manufacturer warranty</li>
+      </ul>
+
+      <div class="price-row">
+        <span class="new-price">€ 249</span>
+        <span class="old-price">€ 299</span>
+      </div>
+    </section>
+
+    <form class="order-form" id="orderForm">
+
+      <div class="section-title">
+        <h2>Personal information</h2>
+        <div class="line"></div>
+      </div>
+      <!-- Input fields arranged in grid -->
+      <div class="form-grid two-columns">
+        <input type="text" placeholder="First Name" required />
+        <input type="text" placeholder="Last Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+      </div>
+
+      <div class="section-title">
+        <h2>Delivery Address</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="form-grid">
+        <input type="text" placeholder="Address Line 1" class="full-width" required />
+        <input type="text" placeholder="Address Line 2 (optional)" class="full-width" />
+        <!-- Grouped inputs in rows -->
+        <div class="two-columns row">
+          <input type="text" placeholder="City / Town" required />
+          <input type="text" placeholder="County" required />
+          </div>
+
+        <div class="two-columns row">
+          <input type="text" placeholder="Eircode" required />
+          <input type="text" placeholder="Postal Code" />
+        </div>
+
+        <input type="text" placeholder="Country" class="full-width" required />
+      </div>
+
+      <div class="section-title">
+        <h2>Delivery Method</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="delivery-options">
+        <label>
+  <input type="radio" name="delivery" checked />
+  <span>Standard Delivery <span class="green-text">(Free)</span></span>
+</label>
+
+<label>
+  <input type="radio" name="delivery" />
+  <span>Express Delivery <span class="green-text">(from € 9.99)</span></span>
+</label>
+      </div>
+      <div class="section-title">
+        <h2>Order Notes <span class="optional">(Optional)</span></h2>
+        <div class="line"></div>
+      </div>
+
+      <textarea placeholder="Any special instructions for delivery"></textarea>
+
+      <div class="button-wrap">
+        <button type="submit" class="submit-button">Place my order</button>
+      </div>
+      <!-- Confirmation message -->
+      <!-- Hidden by default, shown after form submission using JavaScript -->
+      <div class="order-message" id="orderMessage">
+        <h2>Thank you for your order!</h2>
+        <p>
+          We will confirm it via email shortly. Once confirmed, you’ll be able to
+          proceed with payment.
+        </p>
+      </div>
+
+    </form>
+  </main>
+  <!-- JavaScript file -->
+ <!-- Handles form submission and shows confirmation message -->
+ <script src="OrderAction.js"></script>
+</body>
+</html>
