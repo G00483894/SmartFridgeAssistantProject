@@ -289,7 +289,7 @@ textarea {
   justify-content: flex-end;
 
   padding: 20px 60px;
-  background: rgba(255, 255, 255, 0.8);
+  background: #B0B59E;
   backdrop-filter: blur(10px);
 
   z-index: 1000;
