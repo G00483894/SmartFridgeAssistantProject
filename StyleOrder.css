@@ -314,3 +314,10 @@ textarea {
 .nav-links a:hover {
   opacity: 0.6;
 }
+/* Style the footer */
+footer {
+  background-color: #B0B59E;
+  padding: 70px;
+  text-align: center;
+  color: white;
+}
